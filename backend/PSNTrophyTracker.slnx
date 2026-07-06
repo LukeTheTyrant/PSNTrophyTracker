@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="PSNTrophyTracker.Api/PSNTrophyTracker.Api.csproj" />
+  <Project Path="PSNTrophyTracker.Application/PSNTrophyTracker.Application.csproj" />
+  <Project Path="PSNTrophyTracker.Domain/PSNTrophyTracker.Domain.csproj" />
+  <Project Path="PSNTrophyTracker.Infrastructure/PSNTrophyTracker.Infrastructure.csproj" />
+</Solution>

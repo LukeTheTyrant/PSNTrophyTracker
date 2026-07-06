@@ -1,0 +1,57 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# .NET
+TestResults/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+project.lock.json
+project.assets.json
+artifacts/
+
+# Visual Studio / Rider / VS Code
+.vs/
+.idea/
+.vscode/
+*.DotSettings.user
+
+# Angular / Node
+node_modules/
+dist/
+out-tsc/
+.angular/
+.npm/
+.eslintcache
+coverage/
+
+# Environment and local settings
+.env
+.env.*
+!.env.example
+appsettings.*.local.json
+appsettings.Local.json
+secrets.json
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
