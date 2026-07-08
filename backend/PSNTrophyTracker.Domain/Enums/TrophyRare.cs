@@ -1,3 +1,4 @@
+namespace PSNTrophyTracker.Domain.Enums;
 public enum TrophyRare
 {
     Common,

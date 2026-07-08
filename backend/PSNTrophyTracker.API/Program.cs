@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PSNTrophyTracker.Infrastructure.Persistence;
+using PSNTrophyTracker.Infrastructure.Persistence.Seed;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,8 +19,14 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    using var scope = app.Services.CreateScope();
+
+    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+    await DatabaseSeeder.SeedAsync(context);
+
     app.MapOpenApi();
-    
+
     app.UseSwagger();
     app.UseSwaggerUI();
 }
@@ -33,7 +40,7 @@ var summaries = new[]
 
 app.MapGet("/weatherforecast", () =>
 {
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
+    var forecast = Enumerable.Range(1, 5).Select(index =>
         new WeatherForecast
         (
             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
